@@ -1,10 +1,10 @@
 package src;
 
-class InsertionSort
+public class InsertionSort
 {
     /* A binary search based function to find the position
        where item should be inserted in a[low..high] */
-    private int binarySearch(int a[], int item, int low, int high) {
+    private static int binarySearch(int a[], int item, int low, int high) {
         if (high <= low)
             return (item > a[low])? (low + 1) : low;
 
@@ -18,7 +18,7 @@ class InsertionSort
         return binarySearch(a, item, low, mid-1);
     }
     /* Binary insertion sort*/
-    private void binaryInsertionSort(int arr[]) {
+    private static void binaryInsertionSort(int arr[]) {
         for (int i = 1; i < arr.length; ++i) {
             int key = arr[i];
             int j = i - 1;
@@ -33,7 +33,7 @@ class InsertionSort
         }
     }
     /*Function to sort array using insertion sort*/
-    private void insertionSort(int arr[]) {
+    static void insertionSort(Integer[] arr) {
         int n = arr.length;
         for (int i = 1; i < n; ++i) {
             int key = arr[i];
@@ -56,9 +56,7 @@ class InsertionSort
     public static void main(String args[]) {
         int arr[] = {12, 11, 13, 5, 6};
 
-        InsertionSort ob = new InsertionSort();
-//        ob.insertionSort(arr);
-        ob.binaryInsertionSort(arr);
+        InsertionSort.binaryInsertionSort(arr);
         printArray(arr);
     }
 }

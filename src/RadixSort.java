@@ -63,4 +63,15 @@ public class RadixSort {
             array[i] = output[i];
         }
     }
+    /* A utility function to print array of size n*/
+    private static void printArray(Integer[] arr) {
+        for (int anArr : arr) System.out.print(anArr + " ");
+    }
+
+    public static void main(String args[]) {
+        Integer[] arr = {12, 11, 13, 5, 6, 5, 7,8,3,5, 41, 53};
+
+        sort(arr);
+        printArray(arr);
+    }
 }
