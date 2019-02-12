@@ -1,3 +1,4 @@
+package src;
 
 public class HeapSort {
     private static <T extends Comparable<T>> void sort(T[] array) {

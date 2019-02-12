@@ -1,3 +1,5 @@
+package src;
+
 class MergeSort {
 
     private void sort(int arr[]){
